@@ -1,0 +1,36 @@
+/* AboutSection.module.css */
+.aboutSection {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .aboutContent {
+    order: 2; /* Displayed below the gallery in large screens */
+  }
+  
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    order: 1; /* Displayed above the about content in large screens */
+  }
+  
+  /* Additional styling for gallery images (adjust as needed) */
+  .gallery img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    
+  }
+  
+  /* Responsive styles for small screens (mobile) */
+  @media (max-width: 768px) {
+    .aboutSection {
+      flex-direction: column-reverse; /* Reverse order for small screens */
+    }
+  
+    .aboutContent,
+    .gallery {
+      order: initial; /* Reset order for small screens */
+    }
+  }
+  
